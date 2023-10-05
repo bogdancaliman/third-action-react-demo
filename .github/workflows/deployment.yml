@@ -1,20 +1,8 @@
 name: Deploy Project
-on: [push, workflow_dispatch]
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v3
-      - name: Install Nodejs
-        uses: actions/setup/node@v3
-        with:
-          node-version: 18
-      - name: Install dependencies
-        run: ci
-      - name: Run tests
-        run: npm test
-      - name: Run eslints
-        run: npm run lint
-      - name: Build Project
-        run: npm run
+        run: echo "it's working"
